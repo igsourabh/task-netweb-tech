@@ -486,7 +486,7 @@ export const data = [
   },
   {
     name: "Cayman Islands",
-    dial_code: "+ 345",
+    dial_code: "+345",
     code: "KY",
   },
   {

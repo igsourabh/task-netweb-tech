@@ -59,7 +59,10 @@ export default function Home() {
   return (
     <>
       <div className="h-full p-36 bg-[#F3F4F6] flex flex-col items-center">
-        <h1 className="text-black text-3xl h-24">Task </h1>
+        <h1 className="text-black text-3xl h-24">Task NetWeb Tech</h1>
+        <a className="text-sky-500 text-lg" href="https://github.com/igsourabh">
+          Sourabh
+        </a>
         <div className="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
           <div className="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
             <table className="min-w-full divide-y divide-gray-300">
