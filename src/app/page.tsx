@@ -4,35 +4,42 @@ import { data } from "./data";
 import { useEffect, useState } from "react";
 import TabelCard from "./components/tabelcard";
 import { useSearchParams } from "next/navigation";
+export type Root = Root2[];
+
+export interface Root2 {
+  name: string;
+  dial_code: string;
+  code: string;
+}
 
 export default function Home() {
   const searchParams = useSearchParams();
   const search = searchParams.get("sort");
 
-  const ascendingByName: any = [...data].sort((a, b) =>
+  const ascendingByName: Root = [...data].sort((a, b) =>
     a.name.localeCompare(b.name)
   );
 
-  const descendingByName: any = [...data].sort((a, b) =>
+  const descendingByName: Root = [...data].sort((a, b) =>
     b.name.localeCompare(a.name)
   );
 
-  const ascendingByDialCode: any = [...data].sort((a, b) =>
+  const ascendingByDialCode: Root = [...data].sort((a, b) =>
     a.dial_code.localeCompare(b.dial_code)
   );
 
-  const descendingByDialCode: any = [...data].sort((a, b) =>
+  const descendingByDialCode: Root = [...data].sort((a, b) =>
     b.dial_code.localeCompare(a.dial_code)
   );
 
-  const ascendingByCode: any = [...data].sort((a, b) =>
+  const ascendingByCode: Root = [...data].sort((a, b) =>
     a.code.localeCompare(b.code)
   );
 
-  const descendingByCode: any = [...data].sort((a, b) =>
+  const descendingByCode: Root = [...data].sort((a, b) =>
     b.code.localeCompare(a.code)
   );
-  const [dataArray, setdataArray] = useState([...data]);
+  const [dataArray, setdataArray] = useState<Root>([...data]);
 
   useEffect(() => {
     if (search == "name") {
